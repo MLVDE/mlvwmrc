@@ -41,6 +41,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/geeqie.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/gkrellm.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/homebank.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/lagrange.xpm \
@@ -70,6 +71,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/geeqie.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/gkrellm.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/homebank.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/lagrange.xpm
@@ -208,6 +210,17 @@ $(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm: $(TEMP_PIXMAP)/godot.png
 	convert $(TEMP_PIXMAP)/godot.png \
 		-resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm
+
+#
+# HomeBank (Finance)
+#
+$(TEMP_PIXMAP)/homebank.png:
+	curl -# -L "https://git.launchpad.net/homebank/plain/pixmaps/hicolor_apps_16x16_homebank.png?h=5.10.x" \
+		-o $(TEMP_PIXMAP)/homebank.png
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/homebank.xpm: $(TEMP_PIXMAP)/homebank.png
+	convert $(TEMP_PIXMAP)/homebank.png \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/homebank.xpm
 
 #
 # Iridium (Browser)

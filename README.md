@@ -298,6 +298,7 @@ Configurations for the following X11 applications are included:
 * [Godot](https://godotengine.org/)
 * [Gxmessage](https://trmusson.dreamhosters.com/programs.html#gxmessage)
 * [HandBrake](https://handbrake.fr/)
+* [HomeBank](https://www.gethomebank.org/en/)
 * [Kid3](https://kid3.kde.org/)
 * [Krita](https://krita.org/)
 * [Lagrange](https://gmi.skyjake.fi/lagrange/)

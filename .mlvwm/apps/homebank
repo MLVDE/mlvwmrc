@@ -1,0 +1,103 @@
+Menu HomeBank-File-OpenRecent
+"..." NonSelect, Gray
+"" NonSelect
+"Clear" NonSelect, Gray
+END
+
+Menu HomeBank-File, Label "File", Left
+"New" Action SendMessage C+N
+"Open..." Action SendMessage C+O
+"Open Recent" SubMenu HomeBank-File-OpenRecent
+"" NonSelect
+"Save" Action SendMessage C+S
+"Save As..." Action SendMessage SC+S
+"" NonSelect
+"Import..." Action SendMessage C+I
+"Export as QIF..." NonSelect, Gray
+"" NonSelect
+"Revert" NonSelect, Gray
+"Restore backup" NonSelect, Gray
+"" NonSelect
+"Properties..." NonSelect, Gray
+"" NonSelect
+"Close" Action SendMessage C+W
+"Quit" Action SendMessage C+Q
+END
+
+Menu HomeBank-Edit, Label "Edit"
+"Preferences..." NonSelect, Gray
+END
+
+Menu HomeBank-View, Label "View"
+"Show/Hide Toolbar" NonSelect, Gray
+"Show/Hide Total Chart" NonSelect, Gray
+"Show/Hide Time Chart" NonSelect, Gray
+"Show/Hide Bottom Lists" NonSelect, Gray
+END
+
+Menu HomeBank-Manage, Label "Manage"
+"Wallet.." NonSelect, Gray
+"Accounts..." NonSelect, Gray
+"Payees..." NonSelect, Gray
+"Categories..." NonSelect, Gray
+"Tags..." NonSelect, Gray
+"" NonSelect
+"Scheduled/Template..."NonSelect, Gray
+"Assignments..." NonSelect, Gray
+"Currencies..." NonSelect, Gray
+"" NonSelect
+"Budget..." NonSelect, Gray
+"Budget (table view)..." NonSelect, Gray
+END
+
+Menu HomeBank-Transactions, Label "Transactions"
+"Add..." NonSelect, Gray
+"Show..." NonSelect, Gray
+"Show All..." Action SendMessage C+A
+"" NonSelect
+"Set Scheduler..." NonSelect, Gray
+"Post Scheduled" NonSelect, Gray
+END
+
+Menu HomeBank-Reports, Label "Reports"
+"Statistics..." NonSelect, Gray
+"Trend Time..." NonSelect, Gray
+"Balance..." NonSelect, Gray
+"Budget..." NonSelect, Gray
+"Vehicle Cost..." NonSelect, Gray
+END
+
+Menu HomeBank-Tools, Label "Tools"
+"Show Welcome Dialog..." NonSelect, Gray
+"File Statistics..." NonSelect, Gray
+"" NonSelect
+"Anonymize..." NonSelect, Gray
+END
+
+Menu HomeBank-Help, Label "Help"
+"Contents" Action SendMessage N+F1
+"Get Help Online..." NonSelect, Gray
+"" NonSelect
+"Check for Updates..." NonSelect, Gray
+"Release Notes" NonSelect, Gray
+"Report a Problem..." NonSelect, Gray
+"Translate this Application..." NonSelect, Gray
+"" NonSelect
+"About" NonSelect, Gray
+END
+
+MenuBar HomeBank
+HomeBank-File
+HomeBank-Edit
+HomeBank-View
+HomeBank-Manage
+HomeBank-Transactions
+HomeBank-Reports
+HomeBank-Tools
+HomeBank-Help
+END
+
+Style
+"homebank" NoSBarH, NoSBarV
+"homebank" MiniIcon homebank.xpm, MenuBar HomeBank
+END
